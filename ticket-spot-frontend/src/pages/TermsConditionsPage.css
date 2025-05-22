@@ -1,0 +1,66 @@
+/* src/pages/TermsConditionsPage.css */
+.terms-conditions-container {
+    max-width: 800px; /* Increased max-width for better readability */
+    margin: 70px auto 50px; /* Adjusted vertical margins */
+    padding: 40px; /* Increased padding */
+    line-height: 1.8;
+    color: #374151; /* Darker gray */
+    background: linear-gradient(135deg, #f0f2f5 0%, #e1e7ed 100%); /* Subtle gradient */
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    animation: fadeIn 0.5s ease-out forwards; /* Fade-in animation */
+  }
+  
+  .terms-conditions-container h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #4c51bf; /* A nice purple/blue */
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.05); /* Subtle text shadow */
+  }
+  
+  .terms-conditions-container section {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent white background for sections */
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  }
+  
+  .terms-conditions-container h2 {
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #2d3748;
+  }
+  
+  .terms-conditions-container p {
+    margin-bottom: 15px;
+  }
+  
+  .terms-conditions-container a {
+    color: #3b82f6;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  .terms-conditions-container a:hover {
+    text-decoration: underline;
+  }
+  
+  .terms-conditions-container p.last-updated {
+    font-size: 0.875rem;
+    color: #718096;
+    margin-top: 40px;
+    text-align: center;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }

@@ -1,0 +1,308 @@
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 70px);
+  background-color: rgba(0, 0, 0, 0.5);
+  animation: fadeIn 0.3s ease-out forwards;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.login-modal {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 350px;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.modal-header h2 {
+  font-size: 1.8rem;
+  color: #333;
+  margin: 0;
+  font-weight: 600;
+}
+
+.close-button {
+  font-size: 1.5rem;
+  color: #777;
+  cursor: pointer;
+  border: none;
+  background: none;
+  padding: 0;
+}
+
+.social-login-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+.social-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  color: #333; /* Default text color for social buttons */
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  background-color: #fff;
+  transition: border-color 0.3s ease-in-out, background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  width: 100%;
+}
+
+.social-button:hover {
+  border-color: #007bff;
+  background-color: #e9f1ff;
+  color: #007bff;
+}
+
+.social-button i {
+  font-size: 1.2rem;
+}
+
+/*.social-button.google { /* REMOVE these specific color rules */
+/* color: #db4437; */
+/*}*/
+
+.social-button.google:hover {
+  background-color: #fce8e6;
+  border-color: #db4437;
+  color: #db4437;
+}
+
+.social-button.facebook {
+  color: #3b5998;
+}
+
+.social-button.facebook:hover {
+  background-color: #e7e9f5;
+  border-color: #3b5998;
+  color: #3b5998;
+}
+
+.social-button.apple {
+  color: #000;
+}
+
+.social-button.apple:hover {
+  background-color: #f0f0f0;
+  border-color: #000;
+  color: #000;
+}
+
+.separator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 15px 0;
+  color: #999;
+  font-size: 0.9rem;
+}
+
+.separator::before,
+.separator::after {
+  content: '';
+  flex-grow: 1;
+  background-color: #ddd;
+  height: 1px;
+  margin: 0 10px;
+}
+
+.mobile-login {
+  margin-bottom: 20px;
+}
+
+.mobile-input-group {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 8px;
+}
+
+.mobile-input-group span {
+  padding-right: 10px;
+  color: #555;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.mobile-input-group input {
+  flex-grow: 1;
+  border: none;
+  padding: 8px 0;
+  font-size: 1rem;
+  outline: none;
+  color: #333;
+}
+
+.mobile-input-group input::placeholder {
+  color: #999;
+}
+
+.terms {
+  text-align: center;
+  font-size: 0.8rem;
+  color: #777;
+  margin-top: 15px;
+}
+
+.terms a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.terms a:hover {
+  text-decoration: underline;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* Existing styles */
+
+@keyframes slideIn {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.login-modal.slide-in {
+  animation: slideIn 0.3s ease-out forwards;
+}
+
+.modal-header.fade-in-down {
+  animation: fadeInDown 0.3s ease-out forwards;
+  opacity: 0;
+}
+
+.social-button.fade-in-left {
+  animation: fadeInLeft 0.3s ease-out forwards;
+  opacity: 0;
+}
+
+.separator.fade-in {
+  animation: fadeIn 0.3s ease-out forwards;
+  opacity: 0;
+}
+
+.mobile-login.fade-in-right {
+  animation: fadeInRight 0.3s ease-out forwards;
+  opacity: 0;
+}
+
+.terms.fade-in-up {
+  animation: fadeInUp 0.3s ease-out forwards;
+  opacity: 0;
+}
+
+/* LoginPage.css */
+/* Existing styles */
+
+.mobile-login {
+  margin-bottom: 20px;
+  display: flex; /* Arrange input and button in a column */
+  flex-direction: column;
+  gap: 10px; /* Add some spacing between input and button */
+}
+
+.continue-button {
+  background-color: #007bff; /* Blue button */
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+  width: 100%; /* Make it full width */
+  font-weight: bold;
+}
+
+.continue-button:hover {
+  background-color: #0056b3;
+  transform: translateY(-1px);
+}
+
+.continue-button:active {
+  transform: translateY(0);
+}
+
+/* Existing styles */

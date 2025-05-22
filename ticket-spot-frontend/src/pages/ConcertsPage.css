@@ -1,0 +1,175 @@
+/* Container */
+/* Same background as MoviePage */
+.concerts-container {
+  padding: 30px 30px 50px;
+  background: linear-gradient(120deg, #0d1117, #171c28); /* same as movies */
+  min-height: 100vh;
+  color: #e0e7ff;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: fadeIn 0.8s ease-in;
+}
+
+/* Heading */
+.concerts-heading {
+  font-size: 2.4rem;
+  font-weight: 800;
+  margin-bottom: 35px;
+  color: #f97316; /* warm orange */
+  text-align: center;
+  letter-spacing: 1.1px;
+  text-shadow: 0 0 10px #f9731688;
+}
+
+/* Concerts List Grid */
+.concerts-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+}
+
+/* Concert Card */
+.concert-card {
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(20px);
+  border-radius: 14px;
+  padding: 18px 20px 28px;
+  width: 250px;
+  box-shadow:
+    0 8px 20px rgba(0, 0, 0, 0.35),
+    inset 0 0 8px #f9731622;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  flex-shrink: 0;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  position: relative;
+  overflow: hidden;
+  animation: slideUp 0.7s ease;
+}
+
+/* Hover Effect on Card */
+.concert-card:hover {
+  transform: translateY(-8px) scale(1.04);
+  box-shadow:
+    0 25px 45px rgba(249, 115, 22, 0.65),
+    0 10px 25px rgba(249, 115, 22, 0.4);
+  border: 1px solid #f97316aa;
+  z-index: 10;
+}
+
+/* Concert Image */
+.concert-image {
+  width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+  height: 180px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.55);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.concert-image:hover {
+  transform: scale(1.04) rotate(0.6deg);
+  box-shadow: 0 8px 22px #f97316bb;
+}
+
+/* Title */
+.concert-title {
+  color: #e0e7ff;
+  font-weight: 700;
+  font-size: 1.3rem;
+  margin-top: 14px;
+  margin-bottom: 6px;
+}
+
+/* Info Text */
+.concert-text {
+  color: #a0bcd7;
+  font-size: 0.9rem;
+  margin: 2px 0;
+}
+
+/* Actions: YouTube icon + Book Tickets */
+.concert-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-top: 0.7rem;
+}
+
+/* YouTube Icon */
+.youtube-icon {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(197, 6, 6);
+  font-size: 1.75rem;
+  transition: transform 0.2s ease;
+}
+
+.youtube-icon:hover {
+  transform: scale(1.15);
+  color: #e01818;
+}
+
+/* Book Tickets Button */
+.book-button {
+  background: linear-gradient(135deg, #c2410c, #f97316);
+  color: #e0e7ff;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 36px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  width: 150px;
+  text-align: center;
+  letter-spacing: 0.7px;
+  box-shadow:
+    0 6px 18px #c2410caa,
+    0 0 24px #c2410caa;
+  transition: transform 0.3s ease, box-shadow 0.4s ease, background 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.book-button:hover {
+  transform: scale(1.07);
+  background: linear-gradient(135deg, #f97316, #c2410c);
+  box-shadow:
+    0 10px 30px #fb923ccc,
+    0 0 28px #fb923ccc;
+}
+
+/* Responsive */
+@media (max-width: 800px) {
+  .concert-card {
+    width: 45%;
+  }
+}
+
+@media (max-width: 480px) {
+  .concert-card {
+    width: 100%;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

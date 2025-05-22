@@ -1,0 +1,133 @@
+.standup-container {
+  padding: 30px 30px 50px;
+  background: linear-gradient(120deg, #0d1117, #171c28);
+  min-height: 100vh;
+  color: #e0e7ff;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: fadeIn 0.8s ease-in;
+}
+
+.standup-heading {
+  font-size: 2.4rem;
+  font-weight: 800;
+  margin-bottom: 35px;
+  color: #5eead4; /* bright teal */
+  text-align: center;
+  letter-spacing: 1.1px;
+  text-shadow: 0 0 10px #5eead4aa;
+}
+
+.standup-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+}
+
+/* Card */
+.standup-card {
+  background: #1e293b;
+  border-radius: 14px;
+  padding: 18px 20px 28px;
+  width: 250px;
+  box-shadow:
+    0 8px 20px rgba(0, 0, 0, 0.35),
+    inset 0 0 8px #3dd9cb22;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  flex-shrink: 0;
+  border: 1px solid transparent;
+  position: relative;
+  overflow: hidden;
+  animation: slideUp 0.7s ease;
+}
+
+/* Card Hover */
+.standup-card:hover {
+  transform: translateY(-8px) scale(1.04);
+  box-shadow:
+    0 25px 45px rgba(62, 180, 137, 0.65),
+    0 10px 25px rgba(30, 210, 180, 0.4);
+  border: 1px solid #3dd9cbaa;
+  z-index: 10;
+}
+
+/* Image */
+.standup-image {
+  width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+  height: 180px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.55);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.standup-card .standup-image:hover {
+  transform: scale(1.04) rotate(0.6deg);
+  box-shadow: 0 8px 22px #3dd9cbbb;
+}
+
+/* Button */
+.standup-card button {
+  background: rgba(30, 210, 180, 0.15);
+  color: #5eead4;
+  border: 1.5px solid #5eead4;
+  padding: 10px 20px;
+  border-radius: 40px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.4s ease, background 0.4s ease, border-color 0.4s ease;
+  width: 100%;
+  text-align: center;
+  letter-spacing: 0.8px;
+  user-select: none;
+  position: relative;
+  overflow: hidden;
+  box-shadow:
+    0 0 8px #5eead4cc,
+    0 0 16px #5eead4aa;
+}
+
+/* Button Hover */
+.standup-card button:hover {
+  transform: scale(1.07);
+  background: linear-gradient(135deg, #0f766e, #14b8a6);
+  box-shadow:
+    0 10px 28px #0f766ecc,
+    0 0 24px #0f766ecc;
+}
+
+/* Responsive */
+@media (max-width: 800px) {
+  .standup-card {
+    width: 45%;
+  }
+}
+
+@media (max-width: 480px) {
+  .standup-card {
+    width: 100%;
+  }
+}
+/* Page Fade-In */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Card Slide-Up */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+

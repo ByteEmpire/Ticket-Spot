@@ -1,0 +1,170 @@
+.booking-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  font-family: sans-serif;
+}
+
+.booking-heading {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.screen-container {
+  width: 80%; /* Adjust width as needed */
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.screen {
+  background-color: #555;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.screen svg {
+  font-size: 1.5em;
+}
+
+.seat-map {
+  display: flex;
+  flex-direction: column;
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.seat-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.seat {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+  margin-right: 5px;
+  border-radius: 5px;
+  background-color: #ddd;
+  color: #333;
+  font-size: 0.8em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.seat svg {
+  font-size: 1.2em;
+}
+
+.seat.booked {
+  background-color: #aaa;
+  color: #fff;
+  cursor: not-allowed;
+}
+
+.seat.premium {
+  background-color: #ac944b;
+  color: #333;
+}
+
+.seat.recliner {
+  background-color: #345f8e;
+  color: #fff;
+}
+
+.seat.selected {
+  color: white; /* Ensure text color for selected seats is white */
+}
+
+.seat.selected.recliner {
+  background-color: red; /* Red for selected recliner */
+}
+
+.seat.selected.premium {
+  background-color: rgb(243, 224, 13); /* Yellow for selected premium */
+}
+
+.seat.selected.executive {
+  background-color: rgb(245, 161, 17); /* Orange for selected executive */
+}
+
+.seat-number {
+  margin-left: 5px;
+  font-size: 0.7em;
+}
+
+.row-label {
+  width: 20px;
+  text-align: right;
+  margin-right: 10px;
+  font-weight: bold;
+  color: #555;
+}
+
+.seat-price {
+  margin-left: 10px;
+  font-size: 0.9em;
+  color: #28a745;
+  font-weight: bold;
+}
+
+.seat-gap {
+  width: 15px; /* Adjust the gap size as needed */
+}
+
+.summary {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.summary p {
+  margin-bottom: 10px;
+  font-size: 1em;
+  color: #555;
+}
+
+.payment-button {
+  background-color: #00d9ff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
+
+.payment-button:hover {
+  background-color: #b3000f;
+}
+
+.legend {
+  display: flex;
+  flex-wrap: wrap; /* Allow legend items to wrap to the next line on smaller screens */
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.legend-item .seat {
+  width: 25px;
+  height: 25px;
+  margin: 0;
+}
