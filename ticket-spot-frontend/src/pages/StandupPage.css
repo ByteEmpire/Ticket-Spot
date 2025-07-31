@@ -14,7 +14,7 @@
   font-size: 2.4rem;
   font-weight: 800;
   margin-bottom: 35px;
-  color: #5eead4; /* bright teal */
+  color: #5eead4;
   text-align: center;
   letter-spacing: 1.1px;
   text-shadow: 0 0 10px #5eead4aa;
@@ -27,9 +27,9 @@
   justify-content: center;
 }
 
-/* Card */
 .standup-card {
-  background: #1e293b;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
   border-radius: 14px;
   padding: 18px 20px 28px;
   width: 250px;
@@ -37,14 +37,12 @@
     0 8px 20px rgba(0, 0, 0, 0.35),
     inset 0 0 8px #3dd9cb22;
   transition: transform 0.35s ease, box-shadow 0.35s ease;
-  flex-shrink: 0;
-  border: 1px solid transparent;
+  border: 1px solid rgba(255, 255, 255, 0.12);
   position: relative;
   overflow: hidden;
   animation: slideUp 0.7s ease;
 }
 
-/* Card Hover */
 .standup-card:hover {
   transform: translateY(-8px) scale(1.04);
   box-shadow:
@@ -54,7 +52,6 @@
   z-index: 10;
 }
 
-/* Image */
 .standup-image {
   width: 100%;
   border-radius: 12px;
@@ -65,43 +62,37 @@
   cursor: pointer;
 }
 
-.standup-card .standup-image:hover {
+.standup-image:hover {
   transform: scale(1.04) rotate(0.6deg);
   box-shadow: 0 8px 22px #3dd9cbbb;
 }
 
-/* Button */
-.standup-card button {
-  background: rgba(30, 210, 180, 0.15);
-  color: #5eead4;
-  border: 1.5px solid #5eead4;
-  padding: 10px 20px;
+.movie-button {
+  background: linear-gradient(135deg, #0f766e, #14b8a6);
+  color: #e0e7ff;
+  border: none;
+  padding: 12px 20px;
   border-radius: 40px;
   font-size: 1rem;
   font-weight: 700;
   cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.4s ease, background 0.4s ease, border-color 0.4s ease;
   width: 100%;
   text-align: center;
   letter-spacing: 0.8px;
-  user-select: none;
-  position: relative;
-  overflow: hidden;
   box-shadow:
-    0 0 8px #5eead4cc,
-    0 0 16px #5eead4aa;
+    0 8px 24px #14b8a6cc,
+    0 0 30px #14b8a6cc;
+  transition: transform 0.3s ease, box-shadow 0.4s ease, background 0.4s ease;
 }
 
-/* Button Hover */
-.standup-card button:hover {
+.movie-button:hover {
   transform: scale(1.07);
-  background: linear-gradient(135deg, #0f766e, #14b8a6);
+  background: linear-gradient(135deg, #14b8a6, #0f766e);
   box-shadow:
-    0 10px 28px #0f766ecc,
-    0 0 24px #0f766ecc;
+    0 12px 38px #0f766ecc,
+    0 0 32px #0f766ecc;
 }
 
-/* Responsive */
 @media (max-width: 800px) {
   .standup-card {
     width: 45%;
@@ -113,13 +104,12 @@
     width: 100%;
   }
 }
-/* Page Fade-In */
+
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
 }
 
-/* Card Slide-Up */
 @keyframes slideUp {
   from {
     opacity: 0;
@@ -130,4 +120,3 @@
     transform: translateY(0);
   }
 }
-
