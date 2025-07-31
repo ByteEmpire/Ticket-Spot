@@ -1,7 +1,8 @@
 import React from "react";
 import { SiYoutube } from "react-icons/si";
-import './ConcertsPage.css';
-import { Link } from 'react-router-dom';
+import { MdMusicNote } from "react-icons/md";
+import { Link } from "react-router-dom";
+import "./ConcertsPage.css";
 
 const concertsData = [
   {
@@ -452,28 +453,45 @@ const concertsData = [
 const ConcertsPage = () => {
   return (
     <div className="concerts-container">
-      <h1 className="concerts-heading">🎵 Upcoming Concerts</h1>
+      <h1 className="concerts-heading">
+        Upcoming Concerts{" "}
+        <MdMusicNote
+          style={{
+            color: "#f97316",
+            verticalAlign: "middle",
+            marginLeft: "8px",
+          }}
+        />
+      </h1>
       <div className="concerts-list">
-        {concertsData.map(({ id, title, artist, date, time, venue, image, link }) => (
-          <div key={id} className="concert-card">
-            <img src={image} alt={title} className="concert-image" />
-            <div className="concert-info">
-              <h2 className="concert-title">{title}</h2>
+        {concertsData.map(
+          ({ id, title, artist, date, time, venue, image, link }) => (
+            <div key={id} className="concert-card">
+              <a href={link} target="_blank" rel="noopener noreferrer">
+                <img src={image} alt={title} className="concert-image" />
+              </a>
+              <h3 className="concert-title">{title}</h3>
               <p className="concert-text">Artist: {artist}</p>
               <p className="concert-text">Date: {date}</p>
               <p className="concert-text">Time: {time}</p>
               <p className="concert-text">Venue: {venue}</p>
-              <div className="concert-actions">
-                <a href={link} target="_blank" rel="noopener noreferrer" className="youtube-icon">
-                  <SiYoutube />
+              <div className="concert-buttons">
+                <a
+                  href={link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="youtube-icon"
+                  title="Watch Performance"
+                >
+                  <SiYoutube size={28} color="red" />
                 </a>
                 <Link to="/booking">
-                  <button className="movie-button">Book Tickets</button>
+                  <button className="concert-button">Book Tickets</button>
                 </Link>
               </div>
             </div>
-          </div>
-        ))}
+          )
+        )}
       </div>
     </div>
   );
