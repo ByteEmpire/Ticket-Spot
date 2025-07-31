@@ -1,106 +1,132 @@
 /* Container */
 .event-list-container {
-  padding: 40px 30px;
-  background: linear-gradient(135deg, #1e1e2f, #12121c); /* Dark modern bg */
-  min-height: calc(100vh - 70px);
+  padding: 30px 30px 50px;
+  background: linear-gradient(120deg, #0d1117, #171c28);
+  min-height: 100vh;
+  color: #e0e7ff;
   font-family: 'Poppins', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   animation: fadeIn 0.8s ease-in;
 }
 
-/* Grid Layout */
+/* Heading */
+.event-list-container h1 {
+  font-size: 2.4rem;
+  font-weight: 800;
+  margin-bottom: 35px;
+  color: #5eead4;
+  text-align: center;
+  letter-spacing: 1.1px;
+  text-shadow: 0 0 10px #5eead4aa;
+}
+
+/* Event List as Flexbox like MoviesPage */
 .event-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 30px;
-  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
 }
 
 /* Event Card */
 .event-card {
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(20px);
-  border-radius: 20px;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
-  padding: 20px;
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  animation: slideUp 0.7s ease;
+  border-radius: 14px;
+  padding: 18px 20px 28px;
+  width: 250px;
+  box-shadow:
+    0 8px 20px rgba(0, 0, 0, 0.35),
+    inset 0 0 8px #3dd9cb22;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  border: 1px solid rgba(255, 255, 255, 0.12);
   position: relative;
   overflow: hidden;
+  animation: slideUp 0.7s ease;
 }
 
-.event-card::before {
-  content: '';
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: linear-gradient(135deg, #ff00cc, #3333ff);
-  opacity: 0.05;
-  transform: rotate(25deg);
-}
-
-/* Hover Elevation */
+/* Hover Effect */
 .event-card:hover {
-  transform: scale(1.03);
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  transform: translateY(-8px) scale(1.04);
+  box-shadow:
+    0 25px 45px rgba(62, 180, 137, 0.65),
+    0 10px 25px rgba(30, 210, 180, 0.4);
+  border: 1px solid #3dd9cbaa;
+  z-index: 10;
 }
 
-/* Heading */
-.event-card h3 {
-  margin-top: 0;
+/* Image */
+.event-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
   margin-bottom: 14px;
-  color: #ffffff;
-  font-size: 1.5rem;
-  font-weight: 600;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.55);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.event-image:hover {
+  transform: scale(1.04) rotate(0.6deg);
+  box-shadow: 0 8px 22px #3dd9cbbb;
+}
+
+/* Title */
+.event-card h3 {
+  font-weight: 700;
+  font-size: 1.3rem;
+  margin-bottom: 6px;
+  color: #e0e7ff;
 }
 
 /* Text */
 .event-card p {
-  color: #bbbbbb;
-  margin-bottom: 12px;
-  font-size: 1rem;
-  line-height: 1.5;
+  color: #a0bcd7;
+  font-size: 0.9rem;
+  margin: 2px 0;
 }
 
-/* Image Styling */
-.event-card .event-image {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-  border-radius: 15px;
-  margin-bottom: 18px;
-  transition: transform 0.3s ease;
-}
-
-.event-card .event-image:hover {
-  transform: scale(1.02);
-}
-
-.event-card button {
-  background: linear-gradient(135deg, #ff00cc, #3333ff);
-  color: #fff;
+/* Button */
+.movie-button {
+  background: linear-gradient(135deg, #0f766e, #14b8a6);
+  color: #e0e7ff;
   border: none;
-  padding: 12px 24px;
-  border-radius: 50px;
+  padding: 12px 20px;
+  border-radius: 40px;
   font-size: 1rem;
-  font-weight: bold;
+  font-weight: 700;
   cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.5s ease;
-  box-shadow: 0 4px 20px rgba(255, 0, 204, 0.3);
-  position: relative;
-  z-index: 1;
-  overflow: hidden;
+  width: 100%;
+  text-align: center;
+  letter-spacing: 0.8px;
+  box-shadow:
+    0 8px 24px #14b8a6cc,
+    0 0 30px #14b8a6cc;
+  transition: transform 0.3s ease, box-shadow 0.4s ease, background 0.4s ease;
 }
 
-/* Button Hover Effect */
-.event-card button:hover {
-  transform: scale(1.08);
-  background: linear-gradient(135deg, #3333ff, #ff00cc); /* Reversed gradient */
-  box-shadow: 0 8px 30px rgba(255, 0, 204, 0.6), 0 0 20px rgba(255, 0, 204, 0.3);
+.movie-button:hover {
+  transform: scale(1.07);
+  background: linear-gradient(135deg, #14b8a6, #0f766e);
+  box-shadow:
+    0 12px 38px #0f766ecc,
+    0 0 32px #0f766ecc;
 }
 
+/* Responsive */
+@media (max-width: 800px) {
+  .event-card {
+    width: 45%;
+  }
+}
+
+@media (max-width: 480px) {
+  .event-card {
+    width: 100%;
+  }
+}
 
 /* Animations */
 @keyframes fadeIn {
