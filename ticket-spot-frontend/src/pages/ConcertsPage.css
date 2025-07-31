@@ -1,8 +1,7 @@
 /* Container */
-/* Same background as MoviePage */
 .concerts-container {
   padding: 30px 30px 50px;
-  background: linear-gradient(120deg, #0d1117, #171c28); /* same as movies */
+  background: linear-gradient(120deg, #0d1117, #171c28);
   min-height: 100vh;
   color: #e0e7ff;
   font-family: 'Poppins', sans-serif;
@@ -17,13 +16,13 @@
   font-size: 2.4rem;
   font-weight: 800;
   margin-bottom: 35px;
-  color: #f97316; /* warm orange */
+  color: #5eead4; /* teal */
   text-align: center;
   letter-spacing: 1.1px;
-  text-shadow: 0 0 10px #f9731688;
+  text-shadow: 0 0 10px #5eead4aa;
 }
 
-/* Concerts List Grid */
+/* List Grid */
 .concerts-list {
   display: flex;
   flex-wrap: wrap;
@@ -31,16 +30,16 @@
   justify-content: center;
 }
 
-/* Concert Card */
+/* Card */
 .concert-card {
-  background: rgba(255, 255, 255, 0.06);
+  background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(20px);
   border-radius: 14px;
   padding: 18px 20px 28px;
   width: 250px;
   box-shadow:
     0 8px 20px rgba(0, 0, 0, 0.35),
-    inset 0 0 8px #f9731622;
+    inset 0 0 8px #3dd9cb22;
   transition: transform 0.35s ease, box-shadow 0.35s ease;
   flex-shrink: 0;
   border: 1px solid rgba(255, 255, 255, 0.12);
@@ -53,13 +52,13 @@
 .concert-card:hover {
   transform: translateY(-8px) scale(1.04);
   box-shadow:
-    0 25px 45px rgba(249, 115, 22, 0.65),
-    0 10px 25px rgba(249, 115, 22, 0.4);
-  border: 1px solid #f97316aa;
+    0 25px 45px rgba(62, 180, 137, 0.65),
+    0 10px 25px rgba(30, 210, 180, 0.4);
+  border: 1px solid #3dd9cbaa;
   z-index: 10;
 }
 
-/* Concert Image */
+/* Image */
 .concert-image {
   width: 100%;
   border-radius: 12px;
@@ -72,7 +71,7 @@
 
 .concert-image:hover {
   transform: scale(1.04) rotate(0.6deg);
-  box-shadow: 0 8px 22px #f97316bb;
+  box-shadow: 0 8px 22px #3dd9cbbb;
 }
 
 /* Title */
@@ -91,12 +90,11 @@
   margin: 2px 0;
 }
 
-/* Actions: YouTube icon + Book Tickets */
-.concert-actions {
+/* Buttons Row */
+.concert-buttons {
   display: flex;
   align-items: center;
   gap: 12px;
-  padding-top: 0.7rem;
 }
 
 /* YouTube Icon */
@@ -105,43 +103,35 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: rgb(197, 6, 6);
-  font-size: 1.75rem;
-  transition: transform 0.2s ease;
 }
 
-.youtube-icon:hover {
-  transform: scale(1.15);
-  color: #e01818;
-}
-
-/* Book Tickets Button */
-.book-button {
-  background: linear-gradient(135deg, #c2410c, #f97316);
+/* Button */
+.concert-button {
+  background: linear-gradient(135deg, #0f766e, #14b8a6);
   color: #e0e7ff;
   border: none;
-  padding: 10px 16px;
-  border-radius: 36px;
-  font-size: 0.95rem;
+  padding: 12px 20px;
+  border-radius: 40px;
+  font-size: 1rem;
   font-weight: 700;
   cursor: pointer;
-  width: 150px;
+  width: 100%;
   text-align: center;
-  letter-spacing: 0.7px;
+  letter-spacing: 0.8px;
   box-shadow:
-    0 6px 18px #c2410caa,
-    0 0 24px #c2410caa;
+    0 8px 24px #14b8a6cc,
+    0 0 30px #14b8a6cc;
   transition: transform 0.3s ease, box-shadow 0.4s ease, background 0.4s ease;
   position: relative;
   overflow: hidden;
 }
 
-.book-button:hover {
+.concert-button:hover {
   transform: scale(1.07);
-  background: linear-gradient(135deg, #f97316, #c2410c);
+  background: linear-gradient(135deg, #14b8a6, #0f766e);
   box-shadow:
-    0 10px 30px #fb923ccc,
-    0 0 28px #fb923ccc;
+    0 12px 38px #0f766ecc,
+    0 0 32px #0f766ecc;
 }
 
 /* Responsive */
